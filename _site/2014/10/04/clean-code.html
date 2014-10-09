@@ -1,0 +1,108 @@
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="there&#39;s no place like home">
+    <meta name="author" content="57.loma">
+    <title>Clean Code</title>
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+    <link href="/assets/blog.css" rel="stylesheet">
+    <style id="holderjs-style" type="text/css"></style>
+</head>
+
+<body>
+<p>I have to admit that the idea of <strong>Clean Code</strong> is really new to me, and all the code
+smell signs that I never knew before! until I was exposed to Agile development framework - Scrum.
+I was suggested to read a book called Clean Code after I attended the TDD workshop
+from Odd-E. I really have to say that it changed my perspective about writing code!!!
+and Martin Fowler once said that:</p>
+
+<blockquote>
+  <p>Any fool can write code that machine can understand.
+Good programmers write code that humans can understand</p>
+</blockquote>
+
+<p>Since then, I try pay more attention when I write code and here are a few things that
+I have changed:</p>
+
+<ol>
+  <li>I won’t write production code without having unit tests</li>
+  <li>I won’t produce more duplicated code</li>
+  <li>I will leave the code base <em>better</em> than it was</li>
+</ol>
+
+<p>So, does it really help me write a clean code? not totally, but it helps
+me to care more about the code that I produce, at least it is better than it was!</p>
+
+<h3 id="what-is-clean-code">What is clean code?</h3>
+<p>The definition of clean code are different for different people but I think they
+all agree that clean code is not <em>dirty code</em>. Em… you may ask what is
+is dirty code then? Dirty code has one characteristic, it calls <em>code smell</em>. Like
+many other dirty things, we try to avoid it, we don’t want to get involve with it and
+it applies to the code as well. So, my definition of clean code is a code base that
+I am comfortable to work with, it’s the code that is easy to change and maintain.
+It just take only a few scroll to see how much the author care about the code.</p>
+
+<h3 id="why-should-i-care-about-clean-code">Why should I care about clean code?</h3>
+<p>Have you ever encounter a situation where you need to apply your changes and you have
+Ctrl+C and Ctrl+V to all over the code base, scrolling through the few hundred lines of
+a function trying to understand what it does, or don’t know what function to use.
+At least, those had happened to me once, and I have realised that those are the
+sign of code smell!. Then, I try to reflect back to my code base, says, what if
+there’s no duplicated code, I would just have to change in only one place (sounds nice huh!)
+I would say having a clean code base brings lots of benefits especially the code the
+we are regularly maintaining.</p>
+
+<h3 id="what-are-some-signs-of-the-code-smells">What are some signs of the code smells?</h3>
+<ul>
+  <li><em>Duplication</em>, duplication is the root of all the evil! Most of the code smell are
+related to the duplication. Duplication can come in many form, they could be something
+that look similar but not the same. For example, two functions are doing the same thing,
+but they just have different name and parameters. When I remove the duplication, It helps me to
+discover other sign of code smell, and it was actually fun to remove those smell, and see
+how code transforms to be cleaner.</li>
+  <li><em>Naming</em>, a good variable or function naming can help to understand the code without
+getting to read the implementation. For example, if I have a function call <strong>XX()</strong>
+can you tell by its name what it does? probably not and you need to find out where the function
+declare and its implementation. But, if the function name <strong>computeSquareOfX()</strong>
+it is pretty straightforward, isn’t it?</li>
+  <li><em>Loooong Function</em>, it’s sign showing that the function is trying to do too many things
+and it’s probably too complicated to making changes. We should try to keep the function
+small, but how small is small enough? Well, according to what I read and my little experiences,
+it tells me that any function more than 10-15 lines is considering long.
+Again, that is what I feel right about it. You don’t have to follow what I set here.</li>
+</ul>
+
+<h3 id="how-do-i-clean-up-code">How do I clean up code?</h3>
+<p>First, stop writing dirty code. Second, Refactoring. When you are refactoring the code,
+it is like you are going into a war! you need a good armour to protect your
+self from enemies (bugs) and you need a sword to help you to
+eliminate those bugs. In other words, you need to have good unit tests wrapping around
+the area you want to change before you do refactoring, and some good refacotring tools that help
+you to do those job. For example in our case is NUnit, Resharper, Code Coverage tools
+or Continuous Integration (CI) server</p>
+
+<p>But, to have a good test in place, you need to refactoring you code first. Oh, wait
+a minute, does it sound like the chicken and egg problem here? Probably not, there
+are a few safe techniques that you can use to refactoring without having test first.
+For examples, <em>lean in compiler</em>, <em>extract interface</em>, <em>scratch refactoring</em>,
+<em>extract and override</em>, <em>renaming</em>, etc. These are just a few, and many useful that
+are described in the book <strong>Wokring Effectively With Legacy Code</strong>
+and it’s available in our library!</p>
+
+<h3 id="where-can-i-learn-more">Where can I learn more?</h3>
+<p>Like other things, we learn best when we practise it and there are so many training and
+tutorials online waiting for you tackle them. If you really can’t find, just practise
+with your code base. Just try to do and see you much you can change the code to
+be cleaner. Reading books also help, it give you some techniques to deal with
+certain problems, or showing you that there are other ways to look at the problems.</p>
+
+<p>It is easy to write code, but writing a cleaner code is taking much more effort
+to do and it’s not just happen over night. It takes times to learn and experiment with.
+Find your own motivation, I can you tell over and over about what is clean code,
+but it probably get you to nowhere, if you just only read about it.</p>
+
+</body>
+<html>
