@@ -1,6 +1,16 @@
 <html>
-{% include header.html %}
+{% include head.html %}
 <body>
-{{ page.content | markdownify }}
+<div class="container">
+  {% include header.html %}
+  <div class="row">
+    <div class="col-sm-8 blog-main">
+      <h2 class="blog-post-title">{{ page.title }}</h2>
+      <p class="blog-post-meta">{{ page.publishedOn }}</p>
+      {{ page.content | markdownify }}
+    </div>
+    {% include sidebar.html %}
+  </div>
+</div>
 </body>
 <html>

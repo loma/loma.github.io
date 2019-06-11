@@ -1,9 +1,14 @@
 <div class="col-sm-3 col-sm-offset-1 blog-sidebar">
   <div class="sidebar-module sidebar-module-inset">
     <h4>About</h4>
-    <p>Hello, my name is Loma. I am interested in Clean Code, Refactoring and TDD.
-      Currently try to improve some legacy C# projects and learning NuGet, Jenkins and VS2013
     <p>
-    <a href="//plus.google.com/114585093346326397514?prsrc=3" rel="publisher" target="_top" style="text-decoration:none;"><img src="//ssl.gstatic.com/images/icons/gplus-16.png" alt="Google+"></a>
+      Hello, my name is Loma. I am interested in Clean Code, Refactoring and TDD.
+      Currently try to learn Ruby on Rails, PHP Laravel, React Native, NodeJS
+    </p>
+    <ul>
+   {% for item in site.posts %}
+      <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+   {% endfor %}
+</ul>
   </div>
 </div>
